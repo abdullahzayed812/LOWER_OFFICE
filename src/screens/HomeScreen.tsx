@@ -8,7 +8,7 @@ export const HomeScreen = () => {
     <>
       <Header title="Home" />
       <Container>
-        <Input placeholder="Search about Qadia" />
+        <Input placeholder="Search about Qadia" search />
         <HomeContent />
       </Container>
     </>

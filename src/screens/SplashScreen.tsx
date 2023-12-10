@@ -1,4 +1,4 @@
-import {Image, Text, View} from 'react-native';
+import {Image} from 'react-native';
 import {Container} from '../components/Container';
 import {IMAGES} from '../configs/images';
 import {useEffect} from 'react';
@@ -12,9 +12,10 @@ interface Props {
 export const SplashScreen: React.FC<Props> = ({navigation}) => {
   useEffect(() => {
     const timerId = setTimeout(() => {
-      navigation.navigate('TabStackScreen', {screen: 'HomeStackScreen'});
-    }, 200);
+      navigation.reset({routes: [{name: 'TabStackScreen'}]});
+    }, 1500);
   }, []);
+
   return (
     <Container center>
       <Image source={IMAGES.splash} style={{transform: [{scale: 0.5}]}} />

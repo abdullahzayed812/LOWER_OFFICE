@@ -1,7 +1,13 @@
 import {NavigatorScreenParams} from '@react-navigation/native';
 
+export type HomeStackParamList = {
+  HomeScreen: undefined;
+  PostsListScreen: undefined;
+  PostDetailsScreen: undefined;
+};
+
 export type TabStackParamList = {
-  HomeStackScreen: undefined;
+  HomeStackScreen: NavigatorScreenParams<HomeStackParamList>;
   ProfileScreen: undefined;
 };
 
