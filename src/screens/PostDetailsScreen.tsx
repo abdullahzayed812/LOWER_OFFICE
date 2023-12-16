@@ -23,7 +23,7 @@ export const PostDetailsScreen = () => {
 
   return (
     <>
-      <Header title="Qadia Details" />
+      <Header title="تفاصيل الجلسة" />
       <Container>
         <PostFiles />
         <AddItem onPress={handleAddPdfFile} />

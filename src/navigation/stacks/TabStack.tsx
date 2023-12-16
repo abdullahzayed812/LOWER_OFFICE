@@ -33,12 +33,12 @@ export const TabStackScreen: React.FC = () => {
       <TabStack.Screen
         name="HomeStackScreen"
         component={HomeStackScreen}
-        options={{tabBarLabel: 'Home'}}
+        options={{tabBarLabel: 'الرئسية'}}
       />
       <TabStack.Screen
         name="ProfileScreen"
         component={ProfileScreen}
-        options={{tabBarLabel: 'Profile'}}
+        options={{tabBarLabel: 'المكتبة'}}
       />
     </TabStack.Navigator>
   );

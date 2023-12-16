@@ -12,13 +12,13 @@ export const HomeContent: React.FC = () => {
   return (
     <View style={styles.container}>
       <Box
-        title="List 1"
-        onPress={() => navigation.navigate('PostsListScreen')}
+        title="جلسات"
+        onPress={() => navigation.navigate('MonthsScreen')}
         imageSrc={IMAGES.info}
       />
-      <Box title="List 2" onPress={() => {}} imageSrc={IMAGES.multimedia} />
-      <Box title="List 3" onPress={() => {}} imageSrc={IMAGES.stats} />
-      <Box title="List 4" onPress={() => {}} imageSrc={IMAGES.info} />
+      <Box title="نقض" onPress={() => {}} imageSrc={IMAGES.info} />
+      <Box title="معارضات" onPress={() => {}} imageSrc={IMAGES.info} />
+      <Box title="جنح" onPress={() => {}} imageSrc={IMAGES.info} />
     </View>
   );
 };

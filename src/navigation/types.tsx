@@ -2,8 +2,9 @@ import {NavigatorScreenParams} from '@react-navigation/native';
 
 export type HomeStackParamList = {
   HomeScreen: undefined;
-  PostsListScreen: undefined;
+  PostsListScreen: {month: number | undefined} | undefined;
   PostDetailsScreen: undefined;
+  MonthsScreen: undefined;
 };
 
 export type TabStackParamList = {

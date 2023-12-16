@@ -6,28 +6,22 @@ import {AddItem} from '../components/AddItem';
 import {AddItemModal} from '../components/AddItemModal';
 import {useAppDispatch, useAppSelector} from '../app/hooks';
 import {selectPostsList, toggleAddItemModal} from '../app/posts/postsSlice';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RouteProp, useRoute} from '@react-navigation/native';
 import {HomeStackParamList} from '../navigation/types';
-
-interface DataProps {
-  title: string;
-}
 
 export const PostsListScreen = () => {
   const dispatch = useAppDispatch();
 
-  const postsList = useAppSelector(selectPostsList);
+  const route = useRoute<RouteProp<HomeStackParamList>>();
 
-  const navigation =
-    useNavigation<NativeStackScreenProps<HomeStackParamList>>();
+  const postsList = useAppSelector(selectPostsList);
 
   const handleAddItem = () => {
     dispatch(toggleAddItemModal(true));
   };
   return (
     <>
-      <Header title="Qadia List" />
+      <Header title={`جلسات شهر ${route.params?.month}`} />
       <Container>
         <FlatList
           data={postsList}
